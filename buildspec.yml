@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - pip install -r requirements.txt -t src
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Nothing to do in the build phase...
+  post_build:
+    commands:
+      - echo Nothing to do in the post_build phase...
+
+artifacts:
+  files:
+    - lambda_function.py
+    - slackweb/*
+  base-directory: src
